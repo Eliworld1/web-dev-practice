@@ -8,12 +8,20 @@ console.log("Volunteer form JavaScript loaded.");
 const nameInput = document.querySelector("#name");
 const result = document.querySelector("#result");
 
-// TODO: Select the form, email input, and interest dropdown.
 
-// TODO: Add a submit event listener to the form.
+const form = document.querySelector("#volunteerForm");
 
-// TODO: Prevent the default form submission.
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-// TODO: Read the input values and check for missing information.
+    const name = document.querySelector("#fullName").value;
+    const email = document.querySelector("#email").value;
+    const interest = document.querySelector("#interest").value;
+    const result = document.querySelector("#result");
 
-// TODO: Display helpful errors or an interest-specific response.
+    if (name === "" || email === "") {
+        result.textContent = "Please enter your name and email address.";
+    } else {
+        result.textContent = "Thank you, " + name + "! Your interest in " + interest + " has been received.";
+    }
+});
