@@ -13,13 +13,10 @@ const form = document.querySelector("#volunteerForm");
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-
-   const fullName = nameInput.value;
-
-const email = emailInput.value;
-
-const interest = interestSelect.value;
-
+    const fullName = nameInput.value;
+    const email = emailInput.value;
+    const interest = interestSelect.value;
+    const result = document.querySelector("#result");
 
 
     if (fullName === "" || email === "") {
