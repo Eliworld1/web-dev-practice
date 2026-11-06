@@ -14,14 +14,64 @@ const form = document.querySelector("#volunteerForm");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const name = document.querySelector("#fullName").value;
-    const email = document.querySelector("#email").value;
-    const interest = document.querySelector("#interest").value;
-    const result = document.querySelector("#result");
+   const fullName = nameInput.value;
 
-    if (name === "" || email === "") {
-        result.textContent = "Please enter your name and email address.";
-    } else {
-        result.textContent = "Thank you, " + name + "! Your interest in " + interest + " has been received.";
-    }
+const email = emailInput.value;
+
+const interest = interestSelect.value;
+
+
+
+// TODO: Display helpful errors or an interest-specific response.
+
+if (fullName === "") {
+
+    result.textContent = "Please enter your full name.";
+
+} 
+
+else if (email === "") {
+
+    result.textContent = "Please enter your email.";
+
+}
+
+else if (interest === "") {
+
+    result.textContent = "Please select an interest.";
+
+}
+
+else if (interest === "outreach") {
+
+    result.textContent = "Explore our community outreach programs!";
+
+}
+
+else if (interest === "events") {
+
+    result.textContent = "Explore our event support opportunities!";
+
+}
+
+else if (interest === "mentoring") {
+
+    result.textContent = "Venture out to our mentoring progtams";
+
+}
+
+else {
+
+    result.textContent = "Thank you, your interest has been subitted successfully";
+
+}
+
+console.log (fullName);
+
+console.log (email);
+
+console.log(interest);
+
 });
+
+
