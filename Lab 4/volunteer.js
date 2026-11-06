@@ -22,10 +22,10 @@ const interest = interestSelect.value;
 
 
 
-    if (name === "" || email === "") {
-        result.textContent = "Please enter your name and email address.";
+    if (fullName === "" || email === "") {
+        result.textContent = "Please enter your full name and email address.";
     } else {
-        result.textContent = "Thank you, " + name + "! Your interest in " + interest + " has been received.";
+        result.textContent = "Thank you, " + fullName + "! Your interest in " + interest + " has been received.";
     }
 });
 
